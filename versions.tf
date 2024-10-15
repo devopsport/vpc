@@ -6,5 +6,5 @@ terraform {
     random = ">= 3.5.0"
   }
 
-  # backend "remote" {}
+  backend "remote" {}
 }
