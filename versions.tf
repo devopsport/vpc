@@ -5,4 +5,6 @@ terraform {
     aws    = ">= 5.60.0"
     random = ">= 3.5.0"
   }
+
+  # backend "remote" {}
 }

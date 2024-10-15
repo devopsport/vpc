@@ -1,3 +1,3 @@
-output "main" {
-  value = null_resource.main
+output "vpc" {
+  value = aws_vpc.main.id
 }
