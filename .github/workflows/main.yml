@@ -65,5 +65,12 @@ jobs:
 
         curl --location --request POST "https://api.getport.io/v1/blueprints/${blueprint_id}/entities?upsert=true" 	--header "Authorization: Bearer $access_token" 	--header "Content-Type: application/json" 	--data-raw '{
           "identifier": "'${moduleName}'",
-          "properties": {"latest_version":["'${versionRelease}"]}
+          "properties": {"latest_version":["'${versionRelease}'"]}
+        }'
+
+        curl --location --request POST "https://api.getport.io/v1/blueprints/${blueprint_id}/entities?upsert=true" 	--header "Authorization: Bearer $access_token" 	--header "Content-Type: application/json" 	--data-raw '{
+          "identifier": "'${moduleName}'",
+          "title": "'${moduleName}'",
+          "properties": {"url":"https://github.com/devopsport/'${moduleName}'","security":true,"latest_version":["'${versionRelease}'"],"quality":true},
+          "relations": {"organization":"icarus","git_hub_team":"admin-team"}
         }'
