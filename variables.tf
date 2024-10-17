@@ -35,5 +35,5 @@ variable "enable_dns_support" {
 
 variable "enable_dns_hostnames" {
   type    = bool
-  default = true
+  default = false
 }
